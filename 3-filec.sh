@@ -26,10 +26,10 @@ if [ ! -e $FILE_NAME ];then
     elif [ ! -f $FILE_NAME ];then
         echo " Number of lines : $(wc -l < $FILE_NAME)"
         echo " Number of words : $(wc -w < $FILE_NAME)"
-        echo " Number of charcters : $(wc -c < $FILE_NAME)".
+        echo " Number of charcters : $(wc -c < $FILE_NAME)"
         exit 0
 
     else
-        echo " Not a regular file"
+        echo "Not a regular file"
         exit 4
 fi 
