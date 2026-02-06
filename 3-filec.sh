@@ -24,7 +24,7 @@ if [ ! -e $FILE_NAME ];then
         echo " $FILE_NAME is available but its empty"
         exit 0
     
-    elif [ ! -f $FILE_NAME ];then
+    elif [ -f $FILE_NAME ];then
         echo " Number of lines : $(wc -l < $FILE_NAME)"
         echo " Number of words : $(wc -w < $FILE_NAME)"
         echo " Number of charcters : $(wc -c < $FILE_NAME)"
