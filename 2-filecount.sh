@@ -12,7 +12,7 @@ usage(){
 
 [ $# -lt 1 ] && usage;
 
-if [[ -f "$FILE_NAME" $$ ! -s "$FILE_NAME" ]]; then
+if [[ -f "$FILE_NAME" && ! -s "$FILE_NAME" ]]; then
 
     echo -e "$Y The number of lines in $G $FILE_NAME: $(wc -l < "$FILE_NAME") $N"
     echo -e "$Y The number of words in $G $FILE_NAME: $(wc -w < "$FILE_NAME") $N"
