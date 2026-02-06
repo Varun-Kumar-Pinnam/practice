@@ -1,0 +1,24 @@
+#!/bin/bash
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+INPUT_FILE=$1
+OUTPUT_FILE="ERROR.txt"
+
+usage(){
+    echo "USAGE: sh $0 <DIR_NAME>"
+    exit 1
+}
+
+[ $# -lt 1 ] && usage
+
+# Write header (overwrite output file)
+echo "LineNumber:Content (ERROR lines)" > $OUTPUT_FILE
+
+# Filter ERROR lines (append)
+
+grep -n "ERROR" "$INPUT_FILE" >> "$OUTPUT_FILE"
+
+echo "✅ ERROR lines saved to $OUTPUT_FILE"
+
