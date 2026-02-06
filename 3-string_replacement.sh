@@ -15,6 +15,6 @@ if [ -d $DIR ]; then
     find $DIR -type f -name "*.conf" -exec sed "s/$OLD/$NEW/g" {} +
     exit 0
 else
-    echo "%DIR is not available"
+    echo "$DIR is not available"
     exit 1
 fi
