@@ -14,24 +14,24 @@ fi
 if [ -d "$FILE_NAME" ]; then
     echo "List of files available at $FILE_NAME:"
     ls -lrt "$FILE_NAME"
-fi
-
-
-if [ -f "$FILE_NAME" ]; then 
-    echo "$FILE_NAME is available"
-    #  if [ -r $FILE_NAME ]; then 
-    #     echo "$FILE_NAME is readable"
-    # fi
-    # if [ -w $FILE_NAME ]; then
-    #     echo "$FILE_NAME is writeable"
-    # fi
-#...checking permission level
-
-    [ -r "$FILE_NAME" ] && echo "$FILE_NAME" is readable || echo "$FILE_NAME" is not readable 
-    [ -w "$FILE_NAME" ] && echo "$FILE_NAME" is writable || echo "$FILE_NAME" is not writable 
 
 else
-    echo "$FILE_NAME is not available"
+
+    if [ -f "$FILE_NAME" ]; then 
+        echo "$FILE_NAME is available"
+        #  if [ -r $FILE_NAME ]; then 
+        #     echo "$FILE_NAME is readable"
+        # fi
+        # if [ -w $FILE_NAME ]; then
+        #     echo "$FILE_NAME is writeable"
+        # fi
+    #...checking permission level
+
+        [ -r "$FILE_NAME" ] && echo "$FILE_NAME" is readable || echo "$FILE_NAME" is not readable 
+        [ -w "$FILE_NAME" ] && echo "$FILE_NAME" is writable || echo "$FILE_NAME" is not writable 
+
+    else
+        echo "$FILE_NAME is not available"
+    fi
+
 fi
-
-
