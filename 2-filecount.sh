@@ -15,9 +15,15 @@ usage(){
 if [ ! -f $FILE_NAME ]; then
         echo -e "$R $FILE_NAME is not available $N"
         exit 1
+
+    elif [ ! -r "$FILE_NAME" ]; then
+        echo -e "$R Permission denied: cannot read $FILE_NAME $N"
+        exit 1
+
     elif [ ! -s $FILE_NAME ]; then
             echo -e "$G $FILE_NAME exists $R but its an empty file $N"
-            exit 1
+            exit 0
+            
     elif [ -f "$FILE_NAME" ]; then
             echo -e "$Y The number of lines in $G $FILE_NAME: $(wc -l < "$FILE_NAME") $N"
             echo -e "$Y The number of words in $G $FILE_NAME: $(wc -w < "$FILE_NAME") $N"
