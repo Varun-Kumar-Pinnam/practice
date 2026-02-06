@@ -6,7 +6,7 @@ N="\e[0m"
 FILE_NAME=$1
 
 usage(){
-    echo -e " $Y USAGE : $0 <filename>
+    echo -e " $Y USAGE : $0 <filename>"
 }
 
 [ $# -lt 1 ] && usage
@@ -30,6 +30,6 @@ if [ ! -e $FILE_NAME ];then
         exit 0
 
     else
-        echo "Not a regular file"
+        echo " Not a regular file "
         exit 4
 fi 
