@@ -7,6 +7,7 @@ FILE_NAME=$1
 
 usage(){
     echo -e " $Y USAGE : $0 <filename>"
+    exit 1
 }
 
 [ $# -lt 1 ] && usage
