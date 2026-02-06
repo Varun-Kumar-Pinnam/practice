@@ -11,6 +11,12 @@ if [ $# -lt 1 ]; then
     usage
 fi
 
+if [ -d "$FILE_NAME" ]; then
+    ls=$(ls -lrt)
+    echo "Files available: $ls \n"
+fi
+
+
 if [ -f "$FILE_NAME" ]; then 
     echo "$FILE_NAME is available"
     #  if [ -r $FILE_NAME ]; then 
