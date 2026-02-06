@@ -12,8 +12,8 @@ if [ $# -lt 1 ]; then
 fi
 
 if [ -d "$FILE_NAME" ]; then
-    ls=$(ls -lrt)
-    echo "Files available: $ls \n"
+    echo "List of files available at $FILE_NAME:"
+    ls -lrt "$FILE_NAME"
 fi
 
 
