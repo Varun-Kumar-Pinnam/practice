@@ -17,7 +17,7 @@ if [ -d "$FILE_NAME" ]; then
     ls -lrt "$FILE_NAME"
 
     elif [ -f "$FILE_NAME" ]; then  
-            echo "$FILE_NAME is available"
+            echo "$G $FILE_NAME is available $N "
 
             [ -r "$FILE_NAME" ] && echo -e "$G $FILE_NAME is readable $N" || echo -e "$R $FILE_NAME is not readable$N "
             [ -w "$FILE_NAME" ] && echo -e "$G $FILE_NAME is writable $N" || echo -e "$R $FILE_NAME is not writable$N "
