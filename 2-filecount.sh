@@ -30,7 +30,7 @@ if [ ! -e $FILE_NAME ]; then
             echo -e "$Y The number of characters in $G $FILE_NAME: $(wc -m < "$FILE_NAME") $N"
             exit 0
     else 
-        echo " file is not a regular file "
+        echo "$R file is not a regular file $N"
 fi 
 
 
