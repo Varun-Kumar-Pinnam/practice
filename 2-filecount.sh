@@ -16,7 +16,7 @@ if [ ! -s $FILE_NAME ]; then
     echo -e "$R $FILE_NAME is an empty file $N"
     
     elif [ -f "$FILE_NAME" ]; then  
-    echo -e "$Y The number of lines in $G $FILE_NAME: $(wc -l) $N"
+    echo -e "$Y The number of lines in $G $FILE_NAME: $(wc -l $FILE_NAME) $N"
     echo -e "$Y The number of words in $G $FILE_NAME: $(wc -w $FILE_NAME) $N"
     echo -e "$Y The number of characters in $G $FILE_NAME: $(wc -m $FILE_NAME) $N"
 
