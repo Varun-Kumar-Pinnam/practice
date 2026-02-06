@@ -1,5 +1,8 @@
 #!/bin/bash
-
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 FILE_NAME=$1
 
 usage(){
@@ -16,11 +19,8 @@ if [ -d "$FILE_NAME" ]; then
     elif [ -f "$FILE_NAME" ]; then  
             echo "$FILE_NAME is available"
 
-            [ -r "$FILE_NAME" ] && echo "$FILE_NAME is readable" || echo "$FILE_NAME is not readable "
-            [ -w "$FILE_NAME" ] && echo "$FILE_NAME is writable" || echo "$FILE_NAME is not writable "
-
+            [ -r "$FILE_NAME" ] && echo -e "$G $FILE_NAME is readable $N" || echo -e "$R $FILE_NAME is not readable$N "
+            [ -w "$FILE_NAME" ] && echo -e "$G $FILE_NAME is writable $N" || echo -e "$R $FILE_NAME is not writable$N "
     else
-            echo "$FILE_NAME is not available"
-    
-
+            echo -e "$R $FILE_NAME is not available $N"
 fi
