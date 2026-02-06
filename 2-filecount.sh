@@ -17,7 +17,7 @@ if [ ! -f $FILE_NAME ]; then
         exit 1
     elif [ ! -s $FILE_NAME ]; then
             echo -e "$G $FILE_NAME exists $R but its an empty file $N"
-            exit 0
+            exit 1
     elif [ -f "$FILE_NAME" ]; then
             echo -e "$Y The number of lines in $G $FILE_NAME: $(wc -l < "$FILE_NAME") $N"
             echo -e "$Y The number of words in $G $FILE_NAME: $(wc -w < "$FILE_NAME") $N"
