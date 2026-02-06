@@ -12,7 +12,7 @@ usage(){
 
 [ $# -lt 1 ] && usage;
 
-if [ -s $FILE_NAME ]; then
+if [ ! -s $FILE_NAME ]; then
     echo -e "$R $FILE_NAME is an empty file $N"
     
     elif [ -f "$FILE_NAME" ]; then  
@@ -24,4 +24,4 @@ if [ -s $FILE_NAME ]; then
             echo -e "$R $FILE_NAME is not available $N"
 fi
 
- The number of lines in  a.txt: 0 a.txt
+ 
