@@ -12,16 +12,14 @@ usage(){
 
 [ $# -lt 1 ] && usage;
 
-if [ ! -s $FILE_NAME ]; then
-    echo -e "$R $FILE_NAME is an empty file $N"
-    
-    elif [ -f "$FILE_NAME" ]; then  
+if [[ -f "$FILE_NAME" $$ ! -s "$FILE_NAME" ]]; then
+
     echo -e "$Y The number of lines in $G $FILE_NAME: $(wc -l < "$FILE_NAME") $N"
     echo -e "$Y The number of words in $G $FILE_NAME: $(wc -w < "$FILE_NAME") $N"
     echo -e "$Y The number of characters in $G $FILE_NAME: $(wc -m < "$FILE_NAME") $N"
-
-    else
-            echo -e "$R $FILE_NAME is not available $N"
+       
+      else
+            echo -e "$R $FILE_NAME is not available/empty $N"
 fi
 
  
