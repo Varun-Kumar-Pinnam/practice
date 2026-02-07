@@ -2,6 +2,5 @@
 
 for number in $@
 do
-    max=$(number)
-    echo "$max"
+        echo "$number"
 done
