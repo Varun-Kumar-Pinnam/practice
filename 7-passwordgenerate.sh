@@ -22,22 +22,24 @@ fi
 
 echo "$length"
 
-# # Character sets 
-#     UPPER="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-#     LOWER="abcdefghijklmnopqrstuvwxyz"
-#     NUMBERS="0123456789"
-#     SPECIAL="!@#&$"
+# Character sets 
+    UPPER="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    LOWER="abcdefghijklmnopqrstuvwxyz"
+    NUMBERS="0123456789"
+    SPECIAL="!@#&$"
 
-# # one charcater from each set
-# password="$(
-#     echo "${UPPER:RANDOM%${#UPPER}:1}"
-#     echo "${LOWER:RANDOM%${#LOWER}:1}"
-#     echo "${NUMBER:RANDOM%${#NUMBER}:1}"
-#     echo "${SPECIAL:RANDOM%${#SPECIAL}:1}"
-# )"
+# one charcater from each set
+PASSWORD="$(
+    echo "${UPPER:RANDOM%${#UPPER}:1}"
+    echo "${LOWER:RANDOM%${#LOWER}:1}"
+    echo "${NUMBER:RANDOM%${#NUMBER}:1}"
+    echo "${SPECIAL:RANDOM%${#SPECIAL}:1}"
+)"
 
-# #remaining characters
-# remaining="$($length -4)"
+#remaining characters
+REMAINING="$($length -4)"
+
+echo "$REMAINING"
 
 # ALL="$UPPER$LOWER$NUMBER$SPECIAL"
 
