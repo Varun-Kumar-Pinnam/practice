@@ -41,12 +41,14 @@ REMAINING="$(($length -4))"
 
 echo "$REMAINING"
 
-# ALL="$UPPER$LOWER$NUMBER$SPECIAL"
+ALL="$UPPER$LOWER$NUMBER$SPECIAL"
 
-# for(( i=0; i<$remaining; i++ ));
-#     do
-#     password+="${ALL:RANDOM%${#ALL}:1}"
-#     done
+for(( i=0; i<$remaining; i++ ));
+    do
+    PASSWORD+="${ALL:RANDOM%${#ALL}:1}"
+    done
+
+echo "$PASSWORD"
 
 
 
