@@ -1,5 +1,5 @@
 #!/bin/bash
-length ==$1
+length=$1
 
 usage(){
     echo "USAGE: sh $0 <password length>"
