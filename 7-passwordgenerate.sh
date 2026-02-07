@@ -37,7 +37,7 @@ PASSWORD="$(
 )"
 
 #remaining characters
-REMAINING="$($length -4)"
+REMAINING="$(($length -4))"
 
 echo "$REMAINING"
 
