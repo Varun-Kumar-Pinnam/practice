@@ -1,9 +1,9 @@
 #!/bin/bash
-max=""
-for number in $@
+max="$1"
+for number in "$@"
 do
-        max=$number
-        if [ "$max" -gt "$number" ];then
-            echo "$max"
+       
+        if [ "$number" -gt "$max" ];then
+            echo "$number"
         fi
 done
