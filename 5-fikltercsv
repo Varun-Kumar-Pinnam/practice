@@ -13,13 +13,8 @@ usage(){
 
 [ $# -lt 1 ] && usage
 
-# Write header (overwrite output file)
-#echo "LineNumber:Content (ERROR lines)" > $OUTPUT_FILE
 
 # Filter ERROR lines (append)
-
-awk -f ',' /'ERROR'/ 
-
-grep -n "ERROR" "$INPUT_FILE" >> "$OUTPUT_FILE"
+awk -F ',' 'NR==1 || /ERROR/ ' $INPUT_FILE
 
 echo "✅ ERROR lines saved to $OUTPUT_FILE"
