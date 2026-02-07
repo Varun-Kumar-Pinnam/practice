@@ -1,18 +1,22 @@
 #!/bin/bash
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 length=$1
 
 usage(){
-    echo "USAGE: sh $0 <password length>"
+    echo -e "$Y USAGE: sh $0 <password length> $N"
     exit 1
 }
  
 if  [ $# -lt 1 ]; then 
         usage 
     elif [[ ! "$length" =~ ^[0-9]+$ ]]; then
-            echo "Password input "$length" must be a number"
+            echo -e "Password input $R "$length" $N must be a number"
             exit 1
     elif [ "$length" -lt 10 ]; then 
-            echo "password length should be 10 characters"
+            echo "$R password length should be 10 characters $N"
             exit 1
 fi
 
