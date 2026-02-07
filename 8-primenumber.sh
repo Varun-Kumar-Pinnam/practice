@@ -20,8 +20,8 @@ if  [ $# -lt 1 ]; then
             exit 1
 fi
 
-for (( i=2; i*i<=num; i++ ));do 
-    if (( num % i == 0 )); then 
+for (( i=2; i*i<=input; i++ ));do 
+    if (( input % i == 0 )); then 
         echo -e "$Y $input is not a prime number $N"
         exit 0
     fi
