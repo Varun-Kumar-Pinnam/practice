@@ -4,6 +4,7 @@ for number in "$@"
 do
        
         if [ "$number" -gt "$max" ];then
-            echo "$number"
+            max="$number"
         fi
+        echo $max
 done
