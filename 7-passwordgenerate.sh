@@ -41,7 +41,7 @@ REMAINING="$(($length -4))"
 
 ALL="$UPPER$LOWER$NUMBERS$SPECIAL"
 
-for(( i=0; i<$REMAINING; i++ ));
+for(( i=0; i<REMAINING; i++ ));
     do
     PASSWORD+="${ALL:RANDOM%${#ALL}:1}"
     done
