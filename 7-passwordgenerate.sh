@@ -32,7 +32,7 @@ password="$(
 #remaining characters
 remaining=$($length -4)
 
-ALL=$UPPER$LOWER$NUMBER$SPECIAL
+ALL="$UPPER$LOWER$NUMBER$SPECIAL"
 
 for(( i=0; i>$remaining; i++ ))
     do
