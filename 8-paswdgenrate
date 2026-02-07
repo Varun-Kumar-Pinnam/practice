@@ -35,7 +35,12 @@ ALL="$UPPER$LOWER$NUMBER$SPECIAL"
 
 REMAINING="$((FIXED_LEN - 4))"
 
-echo "$REMAINING"
+for (( i=0; i<REMAINING; i++ )); 
+do
+    PASSWORD+="${ALL:RANDOM%${#ALL}:1}"
+done
+
+echo "$PASSWORD"
 
 
 
