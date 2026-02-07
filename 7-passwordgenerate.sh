@@ -1,5 +1,5 @@
 #!/bin/bash
-length = $1
+length ==$1
 
 usage(){
     echo "USAGE: sh $0 <password length>"
@@ -15,6 +15,6 @@ NUMBERS="0123456789"
 SPECIAL="!@#$&"
 
 #one charcater from each set
-password=$(
+password="$(
     echo "${UPPER:RANDOM%$(#UPPER):1}
-)
+)"
