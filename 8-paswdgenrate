@@ -4,7 +4,7 @@ length=$1
 FIXED_LEN=10
 
 usage(){ 
-    echo"USAGE: sh $0 <password length> "
+    echo "USAGE: sh $0 <password length> "
     exit 1
 }
 
