@@ -1,6 +1,7 @@
 #!/bin/bash
-
+max=""
 for number in $@
 do
-        echo "$number"
+        max=$number
+        echo "$max"
 done
