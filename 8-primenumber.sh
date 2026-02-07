@@ -24,6 +24,7 @@ for (( i=2; i*i<=num; i++ ));do
     if (( num % i == 0 )); then 
         echo "$Y $input is not a prime number $N"
         exit 0
+    fi
 done
 
 echo "$G $input $Y is prime number $N"
