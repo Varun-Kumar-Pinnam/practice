@@ -15,6 +15,4 @@ NUMBERS="0123456789"
 SPECIAL="!@#$&"
 
 #one charcater from each set
-password="$(
-    echo "${UPPER:RANDOM%$(#UPPER):1}"
-)"
+password="$(echo "${UPPER:RANDOM%$(#UPPER):1}")"
