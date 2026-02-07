@@ -16,7 +16,7 @@ if  [ $# -lt 1 ]; then
             echo -e "Password input $R "$length" $N must be a number"
             exit 1
     elif [ "$length" -lt 10 ]; then 
-            echo "$R password length should be 10 characters $N"
+            echo -e "$R password length should be 10 characters $N"
             exit 1
 fi
 
