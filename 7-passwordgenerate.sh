@@ -39,7 +39,7 @@ REMAINING="$(($length -4))"
 
 
 
-ALL="$UPPER$LOWER$NUMBER$SPECIAL"
+ALL="$UPPER$LOWER$NUMBERS$SPECIAL"
 
 for(( i=0; i<$REMAINING; i++ ));
     do
