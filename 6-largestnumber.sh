@@ -3,5 +3,7 @@ max=""
 for number in $@
 do
         max=$number
-        echo "$max"
+        if [ $max -gt $number ];then
+            echo "$max"
+        fi
 done
