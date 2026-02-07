@@ -20,8 +20,6 @@ if  [ $# -lt 1 ]; then
             exit 1
 fi
 
-echo "$length"
-
 # Character sets 
     UPPER="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     LOWER="abcdefghijklmnopqrstuvwxyz"
@@ -39,7 +37,7 @@ PASSWORD="$(
 #remaining characters
 REMAINING="$(($length -4))"
 
-echo "$REMAINING"
+
 
 ALL="$UPPER$LOWER$NUMBER$SPECIAL"
 
