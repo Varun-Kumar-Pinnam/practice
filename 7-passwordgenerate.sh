@@ -8,20 +8,20 @@ usage(){
 
 check(){
     echo "USAGE : $0 <password>"
-
 }
+
 [ $# -lt 1 ] && usage
-[ $length -lt 10 ] && echo "password should be 10 characters
+[ $length -lt 10 ] && echo "password should be 10 characters"
 exit 1
 
 
-#Character sets 
-UPPER="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-LOWER="abcdefghijklmnopqrstuvwxyz"
-NUMBERS="0123456789"
-SPECIAL="!@#$&"
+# Character sets 
+    UPPER="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    LOWER="abcdefghijklmnopqrstuvwxyz"
+    NUMBERS="0123456789"
+    SPECIAL="!@#&$"
 
-#one charcater from each set
+# one charcater from each set
 password="$(
     echo "${UPPER:RANDOM%${#UPPER}:1}"
     echo "${LOWER:RANDOM%${#LOWER}:1}"
@@ -34,7 +34,7 @@ remaining="$($length -4)"
 
 ALL="$UPPER$LOWER$NUMBER$SPECIAL"
 
-for(( i=0; i>$remaining; i++ ));
+for(( i=0; i<$remaining; i++ ));
     do
     password+="${ALL:RANDOM%${#ALL}:1}"
     done
