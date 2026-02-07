@@ -7,12 +7,13 @@ usage(){
 }
 
 check(){
-    echo "USAGE : $0 <password>"
+    echo "password should be 10 characters"
+    exit 1
 }
 
 [ $# -lt 1 ] && usage
 [ $length -lt 10 ] && echo "password should be 10 characters"
-exit 1
+check
 
 
 # Character sets 
