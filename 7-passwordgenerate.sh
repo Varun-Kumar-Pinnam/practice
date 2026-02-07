@@ -8,7 +8,7 @@ usage(){
 
 
 [ $# -lt 1 ] && usage #echo "USAGE: sh $0 <password length>"
-exit 1
+
 
 [[ "$length" -lt 10 ]] && echo "password should be 10 characters"
 exit 1
