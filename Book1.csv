@@ -1,0 +1,11 @@
+name,role,status,company
+Alice,Developer,ACTIVE,joindevops
+Bob,Tester,INACTIVE,joindevops
+Charlie,DevOps,ACTIVE,joindevops
+Dave,Manager,INACTIVE,joindevops
+Eve,ERROR,ACTIVE,joindevops
+Frank,Developer,ACTIVE,joindevops
+Grace,Tester,INACTIVE,joindevops
+Heidi,Developer,ACTIVE,joindevops
+Ivan,DevOps,INACTIVE,joindevops
+Judy,Manager,ACTIVE,ERROR
