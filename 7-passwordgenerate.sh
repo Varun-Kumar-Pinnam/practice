@@ -27,12 +27,17 @@ fi
     SPECIAL="!@#&$"
 
 # one charcater from each set
-PASSWORD="$(
-    echo "${UPPER:RANDOM%${#UPPER}:1}"
-    echo "${LOWER:RANDOM%${#LOWER}:1}"
-    echo "${NUMBER:RANDOM%${#NUMBER}:1}"
-    echo "${SPECIAL:RANDOM%${#SPECIAL}:1}"
-)"
+# PASSWORD="$(
+#     echo "${UPPER:RANDOM%${#UPPER}:1}"
+#     echo "${LOWER:RANDOM%${#LOWER}:1}"
+#     echo "${NUMBERS:RANDOM%${#NUMBERS}:1}"
+#     echo "${SPECIAL:RANDOM%${#SPECIAL}:1}"
+# )"
+
+PASSWORD+="${UPPER:RANDOM%${#UPPER}:1}"
+PASSWORD+="${LOWER:RANDOM%${#LOWER}:1}"
+PASSWORD+="${NUMBERS:RANDOM%${#NUMBERS}:1}"
+PASSWORD+="${SPECIAL:RANDOM%${#SPECIAL}:1}"
 
 #remaining characters
 REMAINING="$(($length -4))"
