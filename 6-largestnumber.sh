@@ -1,11 +1,12 @@
 #!/bin/bash
+
 max="$1"
+
 for number in "$@"
-do
-       
+    do
         if [ "$number" -gt "$max" ];then
             max="$number"
         fi
-
-done
-        echo $max
+    done
+    
+echo "Max number is :$max"
