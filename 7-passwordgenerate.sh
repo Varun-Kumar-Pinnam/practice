@@ -43,7 +43,7 @@ echo "$REMAINING"
 
 ALL="$UPPER$LOWER$NUMBER$SPECIAL"
 
-for(( i=0; i<$remaining; i++ ));
+for(( i=0; i<$REMAINING; i++ ));
     do
     PASSWORD+="${ALL:RANDOM%${#ALL}:1}"
     done
