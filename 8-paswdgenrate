@@ -9,7 +9,7 @@ usage(){
 
 if [ $# -lt 1 ];then
     usage
-elif [ ! $length =~ ^[0-9]+$ ];then 
+elif [[ ! $length =~ ^[0-9]+$ ]];then 
     echo "Password input should be a number"
     exit 1
 elif [ "$length" -lt 10 ];then
