@@ -8,8 +8,10 @@ length=$1
 
 [ $# -lt 1 ] && echo "USAGE: sh $0 <password length>"
 exit 1
+
 [ $length -lt 10 ] && echo "password should be 10 characters"
 exit 1
+echo "$length"
 
 # Character sets 
     UPPER="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
