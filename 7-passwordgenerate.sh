@@ -8,10 +8,10 @@ usage(){
  
 if  [ $# -lt 1 ]; then 
         usage 
-    elif [ ! "$length" =~ ^[0-9]+$ ]; then
+    elif [[ ! "$length" =~ ^[0-9]+$ ]]; then
             echo "Password input "$length" must be a number"
             exit 1
-    else [ ! "$length" -ge 10 ]; then 
+    elif [ "$length" -lt 10 ]; then 
             echo "password length should be 10 characters"
             exit 1
 fi
