@@ -1,0 +1,35 @@
+#!/bin/bash
+
+length=$1
+
+usage(){ 
+    echo"USAGE: sh $0 <password length> "
+    exit 1
+}
+
+if [ $# -lt 1 ];then
+    usage
+elif [ ! $length =~ ^[0-9]+$ ];then 
+    echo "Password input should be a number"
+    exit 1
+elif [ "$length" -lt 10 ];then
+    echo "password lenght should be 10"
+    exit 1
+fi
+
+
+# Character sets 
+ UPPER="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ LOWER="abcdefghijklmnopqrstuvwxyz"
+ NUMBERS="0123456789"
+ SPECIAL="!@#&$"
+
+ #one character from each set
+ PASSWORD="${UPPER:RANDOM%${#UPPER}:1}"
+ PASSWORD+="${LOWER:RANDOM%${#LOWER}:1}"
+ PASSWORD+="${NUMBERS:RANDOM%${#NUMBERS}:1}"
+ PASSWORD+="${SPECIAL:RANDOM%${#SPECIAL}:1}"
+
+echo "$PASSWORD"
+
+
