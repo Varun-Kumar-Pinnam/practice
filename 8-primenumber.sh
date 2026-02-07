@@ -15,7 +15,7 @@ if  [ $# -lt 1 ]; then
     elif [[ ! $input =~ ^[0-9]+$ ]]; then
             echo -e "Input $R "$input" $N must be a number"
             exit 1
-    elif [[ input <= 1 ]]; then
+    elif [[ $input -le 1 ]]; then
             echo -e "$input is not a prime member"
             exit 1
 fi
