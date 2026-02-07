@@ -13,8 +13,12 @@ usage(){
 
 [ $# -lt 1 ] && usage
 
+if [ "$INPUT_FILE" == *.csv ];then 
+        # Filter ERROR lines (append)
+        awk -F ',' 'NR==1 || /ERROR/ ' $INPUT_FILE >> $OUTPUT_FILE
+        echo "✅ ERROR lines saved to $OUTPUT_FILE"
+        exit 0
+else    
+        echo "Its not a csv file"
+fi
 
-# Filter ERROR lines (append)
-awk -F ',' 'NR==1 || /ERROR/ ' $INPUT_FILE >> $OUTPUT_FILE
-
-echo "✅ ERROR lines saved to $OUTPUT_FILE"
