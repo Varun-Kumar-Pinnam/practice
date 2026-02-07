@@ -3,7 +3,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-input=$1
+num=$1
 
 usage(){
     echo -e "$Y USAGE: sh $0 <Number> $N"
@@ -12,19 +12,19 @@ usage(){
  
 if  [ $# -lt 1 ]; then 
         usage 
-    elif [[ ! $input =~ ^[0-9]+$ ]]; then
-            echo -e "Input $R "$input" $N must be a number"
+    elif [[ ! $num =~ ^[0-9]+$ ]]; then
+            echo -e "num $R "$num" $N must be a number"
             exit 1
-    elif [[ $input -le 1 ]]; then
-            echo -e "$input is not a prime member"
+    elif [[ $num -le 1 ]]; then
+            echo -e "$num is not a prime member"
             exit 1
 fi
 
-for (( i=2; i*i<=input; i++ ));do 
-    if (( input % i == 0 )); then 
-        echo -e "$Y $input is not a prime number $N"
+for (( i=2; i*i<=num; i++ ));do 
+    if (( num % i == 0 )); then 
+        echo -e "$Y $num is not a prime number $N"
         exit 0
     fi
 done
 
-echo -e "$G $input $Y is prime number $N"
+echo -e "$G $num $Y is prime number $N"
