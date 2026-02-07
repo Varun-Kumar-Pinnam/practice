@@ -1,6 +1,7 @@
 #!/bin/bash
 
 length=$1
+FIXED_LEN=10
 
 usage(){ 
     echo"USAGE: sh $0 <password length> "
@@ -30,6 +31,12 @@ fi
  PASSWORD+="${NUMBERS:RANDOM%${#NUMBERS}:1}"
  PASSWORD+="${SPECIAL:RANDOM%${#SPECIAL}:1}"
 
-echo "$PASSWORD"
+ALL="$UPPER$LOWER$NUMBER$SPECIAL"
+
+REMANINIG=$(($FIXED_LEN - 4 ))
+
+echo "$REMAINING"
+
+
 
 
