@@ -6,5 +6,6 @@ do
         if [ "$number" -gt "$max" ];then
             max="$number"
         fi
-        echo $max
+
 done
+        echo $max
