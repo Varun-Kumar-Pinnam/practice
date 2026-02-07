@@ -4,6 +4,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 length=$1
+FIXED_LEN=10
 
 usage(){
     echo -e "$Y USAGE: sh $0 <password length> $N"
@@ -40,9 +41,8 @@ PASSWORD+="${NUMBERS:RANDOM%${#NUMBERS}:1}"
 PASSWORD+="${SPECIAL:RANDOM%${#SPECIAL}:1}"
 
 #remaining characters
-REMAINING="$(($length -4))"
 
-
+REMAINING="$(($FIXED_LEN -4))"
 
 ALL="$UPPER$LOWER$NUMBERS$SPECIAL"
 
