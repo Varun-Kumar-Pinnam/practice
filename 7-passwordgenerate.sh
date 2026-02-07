@@ -30,7 +30,7 @@ password="$(
 )"
 
 #remaining characters
-remaining=$($length -4)
+remaining="$($length -4)"
 
 ALL="$UPPER$LOWER$NUMBER$SPECIAL"
 
