@@ -12,7 +12,7 @@ usage(){
 
 if [ "$INPUT_FILE" == *.csv ]; then 
         awk -F ',' 'NR==1 || /ERROR/' "$INPUT_FILE" >> $$OUTPUT_FILE
-        exit o
+        exit 0
         else
             echo "$INPUT_FILE is not a csv file"
             exit 1
