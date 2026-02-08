@@ -2,7 +2,7 @@
 
 length=$1
 
-if [[ ! $max =~ ^[0-9]+$ ]]; then 
+if [[ ! $length =~ ^[0-9]+$ ]]; then 
         echo "please input only numeric value"
         exit 1
     elif [[ $length -lt 10 ]]; then 
@@ -12,3 +12,5 @@ fi
 
 echo "$length"
 
+
+ 
