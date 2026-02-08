@@ -25,6 +25,7 @@ if [ ! -e $FILE_NAME ]; then
         echo "$FILE_NAME is an empty file"
         exit 1
     elif [ -f $FILE_NAME ]; then
+        echo "$FILE_NAME is available at $PWD
         [ -r $FILE_NAME ] && echo "$FILE_NAME is readable" || echo "$FILE_NAME is not readable"
         [ -w $FILE_NAME ] && echo "$FILE_NAME is readable" || echo "$FILE_NAME is not readable"
 fi
