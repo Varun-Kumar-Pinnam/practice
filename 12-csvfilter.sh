@@ -10,7 +10,7 @@ usage(){
 
 [ $# -lt 1 ] && usage
 
-if [ "$INPUT_FILE" == "*.csv" ]; then 
+if [ "$INPUT_FILE" == *.csv ]; then 
         awk -F ',' 'NR==1 || /ERROR/' "$INPUT_FILE" >> $$OUTPUT_FILE
         exit o
         else
