@@ -9,7 +9,7 @@ usage(){
     exit 1
 }
 
-[ $# -lt 1 ] && 
+[ $# -lt 1 ] && usage
 
 if [ -d $DIR ]; then
     find $DIR -type f -name "*.conf" -exec sed -i.bak 's/$OLD/$NEW/g' {} +
