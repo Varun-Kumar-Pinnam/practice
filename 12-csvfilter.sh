@@ -11,8 +11,9 @@ usage(){
 [ $# -lt 1 ] && usage
 
 if [ "$INPUT_FILE" == *.csv ]; then 
-        awk -F ',' 'NR==1 || /ERROR/' "$INPUT_FILE" >> $$OUTPUT_FILE
+        awk -F ',' 'NR==1 || /ERROR/' "$INPUT_FILE" >> $OUTPUT_FILE
         exit 0
+
         else
             echo "$INPUT_FILE is not a csv file"
             exit 1
