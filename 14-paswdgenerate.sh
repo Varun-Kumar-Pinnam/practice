@@ -10,7 +10,20 @@ if [[ ! $length =~ ^[0-9]+$ ]]; then
         exit 1
 fi 
 
-echo "$length"
+#character set 
+UPPER="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+LOWER="abcdefghijklmnopqrstuvwxyz"
+NUMBERS="0123456789"
+SPECIAL="!@#$%^&"
+
+# each character from each set 
+PASSWORD=${UPPER:RANDOM%${#UPPER}:1}
+PASSWORD+=${LOWER:RANDOM%${#LOWER}:1}
+PASSWORD+=${NUMBERS:RANDOM%${#NUMBERS}:1}
+PASSWORD+=${SPECIAL:RANDOM%${#SPECIAL}:1}
+
+echo "$PASSWORD"
+
 
 
  
