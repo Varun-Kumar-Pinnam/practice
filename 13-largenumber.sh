@@ -7,4 +7,11 @@ if [[ ! $max =~ ^[0-9]+$ ]]; then
     exit 1
 fi
 
+for number in $@
+do
+    if [[ number -gt $max ]]; then
+        max=$number
+    fi
+done
+
 echo "$max"
