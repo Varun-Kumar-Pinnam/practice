@@ -26,8 +26,6 @@ PASSWORD+="${SPECIAL:RANDOM%${#SPECIAL}:1}"
 
 REMAINING=$((length - 4))
 
-echo "$REMAINING"
-
 for (( i=0;i<REMAINING;i++))
 do
     PASSWORD+="${ALL:RANDOM%${#ALL}:1}"
