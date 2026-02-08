@@ -1,6 +1,7 @@
 #!/bin/bash
 
 length=$1
+FIXED_LEN=10
 
 if [[ ! $length =~ ^[0-9]+$ ]]; then 
         echo "please input only numeric value"
@@ -24,7 +25,7 @@ PASSWORD+="${LOWER:RANDOM%${#LOWER}:1}"
 PASSWORD+="${NUMBERS:RANDOM%${#NUMBERS}:1}"
 PASSWORD+="${SPECIAL:RANDOM%${#SPECIAL}:1}"
 
-REMAINING=$((length - 4))
+REMAINING=$((FIXED_LEN - 4))
 
 for (( i=0;i<REMAINING;i++))
 do
