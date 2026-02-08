@@ -19,7 +19,7 @@ if [ ! -e $FILE_NAME ]; then
         exit 1
     elif [ -d $FILE_NAME ] ; then
         list=$(ls -lrt $FILE_NAME)
-        echo "It's a dierectory \n $list"
+        echo -e "It's a dierectory \n $list"
         exit 1
     elif [ -s $FILE_NAME ]; then
         echo "$FILE_NAME is an empty file"
