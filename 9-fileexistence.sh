@@ -27,7 +27,7 @@ if [ ! -e $FILE_NAME ]; then
     elif [ -f $FILE_NAME ]; then
         echo "$FILE_NAME is available at $PWD"
         [ -r $FILE_NAME ] && echo "$FILE_NAME is readable" || echo "$FILE_NAME is not readable"
-        [ -w $FILE_NAME ] && echo "$FILE_NAME is readable" || echo "$FILE_NAME is not readable"
+        [ -w $FILE_NAME ] && echo "$FILE_NAME is writable" || echo "$FILE_NAME is not writable"
 fi
 
 
