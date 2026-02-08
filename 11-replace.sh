@@ -9,13 +9,15 @@ usage(){
     exit 1
 }
 
-[ $# -lt 1 ] && usage
+[ $# -lt 1 ] && 
 
-if [ -d $DIR ]; then
-    find $DIR -type f -name "*.conf" -exec sed -i.bak "s/$OLD/$NEW/g" {} +
-    #find $DIR -type f -name "*.conf" -exec sed -i.bak "s/$OLD/$NEW/g" {} +
-    exit 0
-    else 
-        echo "$DIR is not available"
-        exit 1
-fi
+echo "$OLD $NEW"
+
+# if [ -d $DIR ]; then
+#     find $DIR -type f -name "*.conf" -exec sed -i.bak "s/$OLD/$NEW/g" {} +
+#     #find $DIR -type f -name "*.conf" -exec sed -i.bak "s/$OLD/$NEW/g" {} +
+#     exit 0
+#     else 
+#         echo "$DIR is not available"
+#         exit 1
+# fi
