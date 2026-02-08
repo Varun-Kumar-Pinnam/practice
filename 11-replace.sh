@@ -9,7 +9,7 @@ usage(){
     exit 1
 }
 
-[ $# -lt 1 ] && 
+[ $# -lt 1 ] && usage
 
 echo "$OLD $NEW"
 
