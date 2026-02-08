@@ -34,3 +34,7 @@ done
 
 echo "$PASSWORD"
 
+PASSWORD=$(echo "$PASSWORD" | fold -w1 | shuf | tr -d "\n")
+
+echo "$PASSWORD"
+
