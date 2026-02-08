@@ -17,7 +17,7 @@ usage(){
 if [ ! -e $FILE_NAME ]; then
         echo "$FILE_NAME is not exists"
         exit 1
-    elif [ -d $FILE_NAME] ; then
+    elif [ -d $FILE_NAME ] ; then
         list=$(ls -lrt $FILE_NAME)
         echo "It's a dierectory \n $list"
         exit 1
